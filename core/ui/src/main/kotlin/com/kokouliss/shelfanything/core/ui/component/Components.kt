@@ -1,0 +1,195 @@
+package com.kokouliss.shelfanything.core.ui.component
+
+import androidx.annotation.DrawableRes
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope
+import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.layout.wrapContentWidth
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.LocalContentColor
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.MenuDefaults
+import androidx.compose.material3.MenuItemColors
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.LiveRegionMode
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.liveRegion
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.dp
+import coil3.compose.AsyncImage
+import com.kokouliss.shelfanything.core.ui.R
+
+@Composable
+fun LoadingBox(modifier: Modifier = Modifier) {
+    val loading = stringResource(R.string.core_ui_loading)
+    Box(
+        modifier.fillMaxSize().semantics {
+            contentDescription = loading
+            liveRegion = LiveRegionMode.Polite
+        },
+        contentAlignment = Alignment.Center,
+    ) {
+        CircularProgressIndicator()
+    }
+}
+
+/** Centered icon, title and explanation for a screen that has nothing to show yet. */
+@Composable
+fun EmptyState(
+    @DrawableRes icon: Int,
+    title: String,
+    body: String,
+    modifier: Modifier = Modifier,
+    actions: @Composable ColumnScope.() -> Unit = {},
+) {
+    // Centred while it fits; scrolls once large text makes it taller than the screen.
+    BoxWithConstraints(modifier.fillMaxSize()) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .verticalScroll(rememberScrollState())
+                .heightIn(min = maxHeight)
+                .padding(32.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp, Alignment.CenterVertically),
+            horizontalAlignment = Alignment.CenterHorizontally,
+        ) {
+            Box(
+                Modifier.size(88.dp).clip(CircleShape).background(MaterialTheme.colorScheme.secondaryContainer),
+                contentAlignment = Alignment.Center,
+            ) {
+                AppIcon(icon, null, Modifier.size(40.dp), MaterialTheme.colorScheme.onSecondaryContainer)
+            }
+            Text(
+                title,
+                style = MaterialTheme.typography.titleLarge,
+                textAlign = TextAlign.Center,
+                modifier = Modifier.semantics { heading() },
+            )
+            Text(
+                body,
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                textAlign = TextAlign.Center,
+            )
+            actions()
+        }
+    }
+}
+
+/** Menu entry colours for an action that deletes something: red, as Material asks. */
+@Composable
+fun destructiveMenuItemColors(): MenuItemColors = MenuDefaults.itemColors(
+    textColor = MaterialTheme.colorScheme.error,
+    leadingIconColor = MaterialTheme.colorScheme.error,
+)
+
+/** The logo of the app on the dark tile of its launcher icon. Decorative: the name is shown next to it. */
+@Composable
+fun AppLogo(modifier: Modifier = Modifier) {
+    Image(
+        painter = painterResource(R.drawable.core_ui_logo_shelf),
+        contentDescription = null,
+        // The ink of the AnyKind logos and the corners of their icon tile, 24 of 100.
+        modifier = modifier.background(Color(0xFF171A21), RoundedCornerShape(percent = 24)),
+    )
+}
+
+/** The logo of AnyKind, the collection this app belongs to. Its letters take the colour of the text around it. */
+@Composable
+fun AnyKindWordmark(modifier: Modifier = Modifier) {
+    Box(modifier) {
+        Image(painterResource(R.drawable.core_ui_logo_anykind_mark), contentDescription = "AnyKind")
+        Image(
+            painter = painterResource(R.drawable.core_ui_logo_anykind_letters),
+            contentDescription = null,
+            colorFilter = ColorFilter.tint(LocalContentColor.current),
+        )
+    }
+}
+
+/** The widest a page of content gets, so rows do not stretch across a tablet. Centred past that. */
+fun Modifier.pageWidth(): Modifier = fillMaxWidth().wrapContentWidth().widthIn(max = 840.dp).fillMaxWidth()
+
+/**
+ * The cover of an item, standing like a book: 2 by 3, a faint shadow, and the title on a plain card
+ * when the site gave no picture. Decorative when the title is written next to it.
+ */
+@Composable
+fun Cover(url: String?, title: String, modifier: Modifier = Modifier, contentDescription: String? = null) {
+    Box(
+        modifier
+            .aspectRatio(2f / 3f)
+            .shadow(2.dp, MaterialTheme.shapes.extraSmall)
+            .clip(MaterialTheme.shapes.extraSmall)
+            .background(MaterialTheme.colorScheme.surfaceContainerHigh),
+        contentAlignment = Alignment.Center,
+    ) {
+        if (url.isNullOrBlank()) {
+            Text(
+                title,
+                style = MaterialTheme.typography.labelLarge,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                textAlign = TextAlign.Center,
+                maxLines = 4,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier.padding(6.dp),
+            )
+        } else {
+            AsyncImage(
+                model = url,
+                contentDescription = contentDescription,
+                contentScale = ContentScale.Crop,
+                modifier = Modifier.fillMaxSize(),
+            )
+        }
+    }
+}
+
+/** The plank the covers of a row stand on. Decoration only. */
+@Composable
+fun Plank(modifier: Modifier = Modifier) {
+    Box(
+        modifier
+            .fillMaxWidth()
+            .height(6.dp)
+            .clip(RoundedCornerShape(2.dp))
+            .background(MaterialTheme.colorScheme.surfaceContainerHighest),
+    )
+}
+
+@Composable
+fun BackButton(onClick: () -> Unit) {
+    IconButton(onClick = onClick) {
+        AppIcon(AppIcons.ArrowBack, stringResource(R.string.core_ui_back))
+    }
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="core_ui_back">Back</string>
+    <string name="core_ui_cancel">Cancel</string>
+    <string name="core_ui_save">Save</string>
+    <string name="core_ui_delete">Delete</string>
+    <string name="core_ui_edit">Edit</string>
+    <string name="core_ui_loading">Loading</string>
+    <string name="core_ui_at_limit">Character limit: %1$d</string>
+    <string name="core_ui_error_generic">Something went wrong. Check your connection and try again.</string>
+
+    <string name="core_ui_group_read">Read</string>
+    <string name="core_ui_group_watch">Watch</string>
+    <string name="core_ui_group_listen">Listen</string>
+    <string name="core_ui_group_play">Play</string>
+
+    <string name="core_ui_shelf_books">Books</string>
+    <string name="core_ui_shelf_comics">Comics</string>
+    <string name="core_ui_shelf_manga">Manga</string>
+    <string name="core_ui_shelf_audiobooks">Audiobooks</string>
+    <string name="core_ui_shelf_movies">Movies</string>
+    <string name="core_ui_shelf_series">Series</string>
+    <string name="core_ui_shelf_anime">Anime</string>
+    <string name="core_ui_shelf_cds">CDs</string>
+    <string name="core_ui_shelf_vinyl">Vinyl</string>
+    <string name="core_ui_shelf_cassettes">Cassettes</string>
+    <string name="core_ui_shelf_video_games">Video games</string>
+    <string name="core_ui_shelf_board_games">Board games</string>
+
+    <!-- The three flags on every item. The first two are the same on every shelf. -->
+    <string name="core_ui_own">Own</string>
+    <string name="core_ui_want">Want</string>
+    <string name="core_ui_done_read">Read</string>
+    <string name="core_ui_done_watched">Watched</string>
+    <string name="core_ui_done_listened">Listened</string>
+    <string name="core_ui_done_played">Played</string>
+
+    <string name="core_ui_edition_physical">Physical</string>
+    <string name="core_ui_edition_digital">Digital</string>
+    <string name="core_ui_format_dvd">DVD</string>
+    <string name="core_ui_format_blu_ray">Blu-ray</string>
+    <string name="core_ui_format_4k">4K</string>
+</resources>

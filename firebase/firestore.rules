@@ -1,0 +1,50 @@
+rules_version = '2';
+
+// Only the signed-in person reads and writes their own document and items. The field names and
+// limits match core/data FirestoreSchema.kt and core/domain Item.kt; change them together.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isOwner(uid) {
+      return request.auth != null && request.auth.uid == uid;
+    }
+
+    function text(value, max) {
+      return value is string && value.size() <= max;
+    }
+
+    function count(value) {
+      return value is int && value >= 0 && value <= 9999;
+    }
+
+    function validItem(d) {
+      return d.keys().hasOnly([
+          'shelf', 'title', 'creator', 'year', 'cover', 'source', 'sourceId', 'barcode', 'details',
+          'description', 'own', 'want', 'done', 'edition', 'format', 'watchedOn', 'season', 'episode',
+          'rewatches', 'notes', 'comments', 'createdAt', 'updatedAt',
+        ])
+        && d.shelf is string
+        && d.title is string && d.title.size() > 0 && d.title.size() <= 500
+        && text(d.creator, 500) && text(d.watchedOn, 500) && text(d.barcode, 50)
+        && text(d.description, 10000) && text(d.notes, 4000)
+        && d.details is map && d.details.size() <= 60
+        && d.own is bool && d.want is bool && d.done is bool
+        && count(d.season) && count(d.episode) && count(d.rewatches)
+        && d.comments is list && d.comments.size() <= 500
+        && d.createdAt is int && d.updatedAt is int;
+    }
+
+    match /users/{uid} {
+      allow read, delete: if isOwner(uid);
+      allow create, update: if isOwner(uid)
+        && request.resource.data.keys().hasOnly(['shelves'])
+        && request.resource.data.shelves is list
+        && request.resource.data.shelves.size() <= 20;
+
+      match /items/{itemId} {
+        allow read, delete: if isOwner(uid);
+        allow create, update: if isOwner(uid) && validItem(request.resource.data);
+      }
+    }
+  }
+}

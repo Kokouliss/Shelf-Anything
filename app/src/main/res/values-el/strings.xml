@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Shelf Anything</string>
+    <string name="setup_needed_title">Χρειάζεται ρύθμιση</string>
+    <string name="setup_needed_body">Αυτή η έκδοση δεν έχει ρυθμίσεις Firebase. Πρόσθεσε το app/google-services.json και ξαναφτιάξε την. Τα βήματα είναι στο README.</string>
+</resources>
