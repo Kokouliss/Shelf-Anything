@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="core_ui_back">Πίσω</string>
+    <string name="core_ui_cancel">Άκυρο</string>
+    <string name="core_ui_save">Αποθήκευση</string>
+    <string name="core_ui_delete">Διαγραφή</string>
+    <string name="core_ui_edit">Επεξεργασία</string>
+    <string name="core_ui_loading">Φόρτωση</string>
+    <string name="core_ui_at_limit">Όριο χαρακτήρων: %1$d</string>
+    <string name="core_ui_error_generic">Κάτι πήγε στραβά. Έλεγξε τη σύνδεση και δοκίμασε ξανά.</string>
+
+    <string name="core_ui_group_read">Διάβασμα</string>
+    <string name="core_ui_group_watch">Προβολή</string>
+    <string name="core_ui_group_listen">Ακρόαση</string>
+    <string name="core_ui_group_play">Παιχνίδι</string>
+
+    <string name="core_ui_shelf_books">Βιβλία</string>
+    <string name="core_ui_shelf_comics">Κόμικς</string>
+    <string name="core_ui_shelf_manga">Μάνγκα</string>
+    <string name="core_ui_shelf_audiobooks">Ηχητικά βιβλία</string>
+    <string name="core_ui_shelf_movies">Ταινίες</string>
+    <string name="core_ui_shelf_series">Σειρές</string>
+    <string name="core_ui_shelf_anime">Άνιμε</string>
+    <string name="core_ui_shelf_cds">CD</string>
+    <string name="core_ui_shelf_vinyl">Βινύλια</string>
+    <string name="core_ui_shelf_cassettes">Κασέτες</string>
+    <string name="core_ui_shelf_video_games">Βιντεοπαιχνίδια</string>
+    <string name="core_ui_shelf_board_games">Επιτραπέζια</string>
+
+    <string name="core_ui_own">Το έχω</string>
+    <string name="core_ui_want">Το θέλω</string>
+    <string name="core_ui_done_read">Διαβασμένο</string>
+    <string name="core_ui_done_watched">Το είδα</string>
+    <string name="core_ui_done_listened">Το άκουσα</string>
+    <string name="core_ui_done_played">Το έπαιξα</string>
+
+    <string name="core_ui_edition_physical">Φυσικό</string>
+    <string name="core_ui_edition_digital">Ψηφιακό</string>
+    <string name="core_ui_format_dvd">DVD</string>
+    <string name="core_ui_format_blu_ray">Blu-ray</string>
+    <string name="core_ui_format_4k">4K</string>
+</resources>

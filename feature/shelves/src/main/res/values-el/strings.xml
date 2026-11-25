@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="feature_shelves_title">Shelf Anything</string>
+    <string name="feature_shelves_settings">Ρυθμίσεις</string>
+    <plurals name="feature_shelves_item_count">
+        <item quantity="one">%1$d αντικείμενο</item>
+        <item quantity="other">%1$d αντικείμενα</item>
+    </plurals>
+    <string name="feature_shelves_open">Άνοιγμα</string>
+
+    <string name="feature_shelves_pick_title">Τι συλλέγεις;</string>
+    <string name="feature_shelves_pick_body">Διάλεξε τα ράφια που θέλεις. Τα αλλάζεις αργότερα στις Ρυθμίσεις.</string>
+    <string name="feature_shelves_start">Ξεκίνα</string>
+
+    <string name="feature_shelves_add">Προσθήκη</string>
+    <string name="feature_shelves_search_shelf">Αναζήτηση στο ράφι</string>
+    <string name="feature_shelves_clear">Καθαρισμός</string>
+    <string name="feature_shelves_all">Όλα</string>
+    <string name="feature_shelves_empty_title">Το ράφι είναι άδειο</string>
+    <string name="feature_shelves_empty_body">Πάτησε Προσθήκη για αναζήτηση με τίτλο ή σάρωση barcode.</string>
+    <string name="feature_shelves_no_match">Τίποτα δεν ταιριάζει</string>
+    <string name="feature_shelves_no_match_body">Δοκίμασε άλλη λέξη ή φίλτρο.</string>
+
+    <string name="feature_shelves_add_to">Προσθήκη: %1$s</string>
+    <string name="feature_shelves_search_hint">Αναζήτηση με τίτλο</string>
+    <string name="feature_shelves_scan">Σάρωση barcode</string>
+    <string name="feature_shelves_search_intro">Ψάξε με τον τίτλο, ή σάρωσε το barcode στο πίσω μέρος.</string>
+    <string name="feature_shelves_add_by_hand">Προσθήκη με το χέρι</string>
+    <string name="feature_shelves_needs_key">Η αναζήτηση για %1$s χρειάζεται κλειδί API που αυτή η έκδοση δεν έχει. Δες «Metadata sites» στο README. Μπορείς να προσθέσεις με το χέρι.</string>
+    <string name="feature_shelves_search_failed">Η αναζήτηση δεν δούλεψε. Έλεγξε τη σύνδεσή σου και δοκίμασε ξανά.</string>
+    <string name="feature_shelves_no_results">Δεν βρέθηκε τίποτα. Δοκίμασε άλλη γραφή, ή πρόσθεσε με το χέρι.</string>
+    <string name="feature_shelves_barcode_unknown">Τίποτα για το barcode %1$s. Πρόσθεσέ το με το χέρι και το barcode κρατιέται.</string>
+    <string name="feature_shelves_item_title">Τίτλος</string>
+    <string name="feature_shelves_creator">Συγγραφέας, καλλιτέχνης ή δημιουργός</string>
+    <string name="feature_shelves_year">Έτος</string>
+
+    <string name="feature_shelves_status">Κατάσταση</string>
+    <string name="feature_shelves_edition">Έκδοση</string>
+    <string name="feature_shelves_format">Μορφή</string>
+    <string name="feature_shelves_watched_on">Το είδα σε</string>
+    <string name="feature_shelves_watched_on_hint">Netflix, Disney+, σινεμά, δίσκος…</string>
+    <string name="feature_shelves_season">Σεζόν</string>
+    <string name="feature_shelves_episode">Επεισόδιο</string>
+    <string name="feature_shelves_rewatches">Επαναλήψεις</string>
+    <string name="feature_shelves_decrease">%1$s: λιγότερο</string>
+    <string name="feature_shelves_increase">%1$s: περισσότερο</string>
+    <string name="feature_shelves_notes">Σημειώσεις</string>
+    <string name="feature_shelves_notes_hint">Πρόσθεσε σημείωση</string>
+    <string name="feature_shelves_about">Περιγραφή</string>
+    <string name="feature_shelves_details">Στοιχεία</string>
+    <string name="feature_shelves_comments">Σχόλια</string>
+    <string name="feature_shelves_comment">Σχόλιο</string>
+    <string name="feature_shelves_add_comment">Νέο σχόλιο</string>
+    <string name="feature_shelves_delete_comment">Διαγραφή σχολίου</string>
+    <string name="feature_shelves_share">Κοινοποίηση</string>
+    <string name="feature_shelves_more_actions">Περισσότερα</string>
+    <string name="feature_shelves_delete_item">Αφαίρεση από το ράφι</string>
+    <string name="feature_shelves_delete_confirm">Το «%1$s» φεύγει από το ράφι σου, μαζί με τις σημειώσεις και τα σχόλιά του.</string>
+</resources>

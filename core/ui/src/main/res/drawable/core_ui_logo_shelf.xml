@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The app logo without its dark tile: the three kinds standing on a shelf. From shelf-icon.svg of
+     Panos's graphite kit, in the same 100 by 100 box, so the launcher icon and the sign-in screen can
+     put the tile behind it. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    <group
+        android:scaleX="0.9"
+        android:scaleY="0.9"
+        android:translateX="5"
+        android:translateY="5">
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M8,60h84a2,2 0,0 1,2 2v5a2,2 0,0 1,-2 2H8a2,2 0,0 1,-2 -2v-5a2,2 0,0 1,2 -2z" />
+        <path
+            android:fillColor="#B4472E"
+            android:pathData="M22,48m-12,0a12,12 0,1 0,24 0a12,12 0,1 0,-24 0" />
+        <path
+            android:fillColor="#B58428"
+            android:pathData="M40.5,40h16a2,2 0,0 1,2 2v16a2,2 0,0 1,-2 2h-16a2,2 0,0 1,-2 -2v-16a2,2 0,0 1,2 -2z" />
+        <path
+            android:fillColor="#2F7F92"
+            android:pathData="M76.5,36.62L90,60H63z" />
+    </group>
+</vector>

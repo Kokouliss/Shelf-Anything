@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="feature_auth_title">Shelf Anything</string>
+    <string name="feature_auth_tagline">Every book, film, record and game you own or want, on one shelf.</string>
+    <string name="feature_auth_continue_with_google">Continue with Google</string>
+    <string name="feature_auth_signing_in">Signing in…</string>
+    <string name="feature_auth_error_no_account">No Google account was found on this phone. Add one in Settings and try again.</string>
+    <string name="feature_auth_error_rejected">Google did not finish signing in. Check your connection. If it keeps happening, the SHA-1 fingerprint of this build is missing from Firebase. See the setup steps in the README.</string>
+    <string name="feature_auth_error_not_configured">Google sign-in is not set up in this build. See the setup steps in the README.</string>
+    <string name="feature_auth_error_failed">Sign-in failed. Check your connection and try again.</string>
+
+    <string name="feature_auth_or">or</string>
+    <string name="feature_auth_continue_with_email">Continue with email</string>
+    <string name="feature_auth_your_name">Your name</string>
+    <string name="feature_auth_email">Email</string>
+    <string name="feature_auth_password">Password</string>
+    <string name="feature_auth_password_hint">At least 6 characters</string>
+    <string name="feature_auth_sign_in">Sign in</string>
+    <string name="feature_auth_create_account">Create account</string>
+    <string name="feature_auth_forgot_password">Forgot your password?</string>
+    <string name="feature_auth_new_here">New here? Create an account</string>
+    <string name="feature_auth_have_account">Have an account? Sign in</string>
+    <string name="feature_auth_reset_sent">If %1$s has an account, we sent a link to choose a new password. Check your spam folder too.</string>
+    <string name="feature_auth_error_wrong_credentials">Wrong email or password. If you signed up with Google, tap \"Continue with Google\".</string>
+    <string name="feature_auth_error_invalid_email">That email does not look right.</string>
+    <string name="feature_auth_error_email_in_use">There is already an account with this email. Sign in, or tap \"Continue with Google\" if you signed up that way.</string>
+    <string name="feature_auth_error_weak_password">Choose a longer password, at least 6 characters.</string>
+    <string name="feature_auth_error_too_many_tries">Too many tries. Wait a few minutes and try again.</string>
+    <string name="feature_auth_error_email_not_enabled">Email sign-in is not switched on in Firebase yet. See the setup steps in the README.</string>
+
+    <string name="feature_auth_settings_title">Settings</string>
+    <string name="feature_auth_confirm_email">Confirm your email</string>
+    <string name="feature_auth_confirm_email_text">Tap the link we sent to %1$s. Tap here to send it again.</string>
+    <string name="feature_auth_confirm_email_sent">Sent again. Check your spam folder too.</string>
+    <string name="feature_auth_shelves">Shelves</string>
+    <string name="feature_auth_shelves_hint">Switch on the shelves you collect. A shelf you switch off keeps its items.</string>
+    <string name="feature_auth_your_collection">Your collection</string>
+    <plurals name="feature_auth_item_count">
+        <item quantity="one">%1$d item</item>
+        <item quantity="other">%1$d items</item>
+    </plurals>
+    <string name="feature_auth_share_library">Share your collection</string>
+    <string name="feature_auth_export_csv">Export as CSV</string>
+    <string name="feature_auth_export_csv_hint">A spreadsheet file with everything on every shelf.</string>
+    <string name="feature_auth_appearance">Appearance</string>
+    <string name="feature_auth_appearance_light">Light</string>
+    <string name="feature_auth_appearance_dark">Dark</string>
+    <string name="feature_auth_language">Language</string>
+    <string name="feature_auth_same_as_phone">Same as phone</string>
+    <string name="feature_auth_sign_out">Sign out</string>
+    <string name="feature_auth_sign_out_confirm_text">Your collection stays in the cloud. Sign in again to see it.</string>
+    <string name="feature_auth_delete_account">Delete account</string>
+    <string name="feature_auth_delete_account_confirm_text">Everything on your shelves is deleted for good. Your Google account is not touched. Google will ask you to choose your account one more time.</string>
+    <string name="feature_auth_delete_account_confirm_text_password">Everything on your shelves is deleted for good. You will type your password one more time.</string>
+    <string name="feature_auth_delete_account_failed">Could not delete. Check your connection and that you chose the same Google account.</string>
+    <string name="feature_auth_delete_account_failed_password">Could not delete. Check your connection and your password.</string>
+    <string name="feature_auth_confirm_its_you">Confirm it is you</string>
+    <string name="feature_auth_maker">AnyKind Apps</string>
+</resources>
