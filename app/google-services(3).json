@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "298822829514",
+    "project_id": "shelf-anything",
+    "storage_bucket": "shelf-anything.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:298822829514:android:0bc44b6075a1defaae3b33",
+        "android_client_info": {
+          "package_name": "com.kokouliss.shelfanything"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "298822829514-j9u5m3fnj0pj8cqc9qkhorqal9luaftq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzTmIPbEUuGFgAV8133ppCNAV9qqlUypU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "298822829514-j9u5m3fnj0pj8cqc9qkhorqal9luaftq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
